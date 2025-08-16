@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu mi lobo, yo tu luna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de bienvenida -->
+    <div id="bienvenida">
+        <div class="mensaje-bienvenida">
+            <p>El amor vive en el corazón de los valientes.<br>si lo eres toca mi corazón</p>
+            <button id="entrar">
+            <img src="images/corazon.png" alt="Entrar" class="btn-corazon">
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido real de la web (oculto al inicio) -->
+    <div id="contenido-web" style="display: none;">
+        <header>
+            <h1>nuestro espacio</h1>
+            <p>cada día a tu lado cuenta: <span id="contador"></span></p>
+        </header>
+
+        <main class="contenedor-principal">
+            <!-- Columna izquierda: carrusel -->
+            <section id="carrusel-izquierda" class="columna">
+                <h2>Nuestras fotos</h2>
+                <div class="carrusel">
+                    <img src="images/foto1.jpeg" alt="Foto 1">
+                    <img src="images/foto2.jpeg" alt="Foto 2">
+                    <img src="images/foto3.jpeg" alt="Foto 3">
+                    <img src="images/foto4.jpeg" alt="Foto 4">
+                    <img src="images/foto5.jpeg" alt="Foto 5">
+                    <img src="images/foto6.jpeg" alt="Foto 6">
+                    <img src="images/foto7.jpeg" alt="Foto 7">
+                    <img src="images/foto8.jpeg" alt="Foto 8">
+                </div>
+            </section>
+
+            <!-- Columna derecha: entradas de texto -->
+            <section id="entradas" class="columna">
+                <h2>Entradas</h2>
+
+                <!-- Formulario para nueva entrada -->
+                <form id="form-entrada">
+                    <input type="text" id="titulo" placeholder="Título de la entrada" required>
+                    <textarea id="contenido" placeholder="Escribe tu entrada aquí..." required></textarea>
+                    <button type="submit">Publicar</button>
+                </form>
+
+                <!-- Aquí aparecerán las entradas -->
+                <div id="lista-entradas"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Nosotros</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

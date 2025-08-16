@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body con fondo oscuro o imagen */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f0f0f0; 
+    padding: 20px;
+}
+
+/* Pantalla de bienvenida */
+/* Pantalla de bienvenida */
+#bienvenida {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7); /* fondo traslúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.mensaje-bienvenida {
+    text-align: center;
+    background-color: rgba(255,255,255,0.2); /* panel traslúcido */
+    padding: 50px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px); /* efecto cristal */
+}
+
+.mensaje-bienvenida p {
+    font-size: 2em;
+    font-family:'allura', serif; /* letra elegante */
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Botón con imagen */
+.mensaje-bienvenida button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-corazon {
+    width: 80px; /* tamaño del corazón */
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.btn-corazon:hover {
+    transform: scale(1.2); /* efecto al pasar el mouse */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Contenedor principal: dos columnas */
+.contenedor-principal {
+    display: flex;
+    gap: 20px;
+}
+
+/* Cada columna ocupa 50% */
+.columna {
+    flex: 1;
+}
+
+/* Carrusel */
+.carrusel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.carrusel img.activa {
+    opacity: 1;
+}
+
+/* Formulario de nuevas entradas */
+#form-entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#form-entrada input,
+#form-entrada textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+#form-entrada textarea {
+    resize: vertical;
+}
+
+#form-entrada button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+#form-entrada button:hover {
+    background-color: #666;
+}
+
+/* Entradas publicadas */
+#lista-entradas article {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        flex-direction: column;
+    }
+}
